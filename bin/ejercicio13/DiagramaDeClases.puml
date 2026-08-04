@@ -1,0 +1,29 @@
+@startuml Diagrama de Clases 
+Title Sistema de Estudiantes
+
+class Persona{
+  - nombre: String
+  - email: String
+  - edad: int
+  +getNombre(): String
+  +getEmail(): String
+  +getEdad(): int
+  +mostrarInformacion(): void 
+}
+
+abstract class Curso{
+  -nombreCurso: String
+  -seccionCurso: char 
+  -horarioCurso: String
+  +mostrarInformacion(): void 
+}
+
+class Estudiante{
+  -carne: long 
+  -listaDeCursos[ ]: Curso 
+  +mostrarInformacion(): void 
+}
+Persona <--Estudiante
+Curso <-- Estudiante
+
+@enduml
