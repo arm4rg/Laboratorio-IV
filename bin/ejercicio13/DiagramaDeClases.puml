@@ -1,3 +1,5 @@
+/'Use class y abstract debido a que una clase en Java
+Solo puede tener 1 clase Padre '/
 @startuml Diagrama de Clases 
 Title Sistema de Estudiantes
 
@@ -12,18 +14,20 @@ class Persona{
 }
 
 abstract class Curso{
-  -nombreCurso: String
-  -seccionCurso: char 
-  -horarioCurso: String
-  +mostrarInformacion(): void 
+  #nombreCurso: String
+  #seccionCurso: char 
+  #horarioCurso: String
+  #mostrarInfoCurso(): void 
 }
 
 class Estudiante{
-  -carne: long 
+  -carné: long 
   -listaDeCursos[ ]: Curso 
-  +mostrarInformacion(): void 
+  +getCarné(): long
+  +getListaDeCursos(): Curso 
+  +mostrarInfoEstudiante(): void 
 }
 Persona <--Estudiante
-Curso <-- Estudiante
+Curso <|-- Estudiante
 
 @enduml
