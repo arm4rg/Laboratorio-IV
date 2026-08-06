@@ -2,10 +2,12 @@ package ejercicio15;
 
 public class pruebaEmpleados {
   public static void main(String[] args) {
-    EmpleadoTiempoCompleto empleadoTC = new EmpleadoTiempoCompleto();
     EmpleadoPorHoras empleadoPH = new EmpleadoPorHoras();
-    
-    empleadoTC.calculoDePago();
-    empleadoPH.calculoDePago();
+    EmpleadoTiempoCompleto empleadoTC = new EmpleadoTiempoCompleto();
+    System.out.println("***Empleado Por Hora***");
+    empleadoPH.ingresarPH();
+    System.out.println();
+    System.out.println("***Empleado Tiempo Completo***");
+    empleadoTC.ingresarSalario();
   }
 }
