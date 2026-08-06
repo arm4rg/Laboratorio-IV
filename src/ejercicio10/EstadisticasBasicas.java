@@ -38,9 +38,10 @@ public class EstadisticasBasicas {
         }
       }
       System.out.println("El numero mayor de los 5 numeros es: " +mayor);
-  }
+      menor();
+    }
 
-  public static void Menor(){
+  public static void menor(){
     float menor=numeros[0];
       for (float f : numeros) {
         if (f<menor) {
