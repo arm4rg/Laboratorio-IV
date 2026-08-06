@@ -8,10 +8,10 @@ public class pruebaAnimal {
 
     //Ejercicio 1
     System.out.println("Ejercicio 1 Clase Abstracta Animal");
-    System.out.println("  Perro:");
+    System.out.println("  ->Clase Perro:");
     //Usando los metodos polimorficos
     perro.hacerSonido();
-    System.out.println("  Gato:");
+    System.out.println("  ->Clase Gato:");
     gato.hacerSonido();
   }
 }
