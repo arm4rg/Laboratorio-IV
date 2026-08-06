@@ -1,4 +1,4 @@
-/'Use class y abstract debido a que una clase en Java
+/'Use class e interfase debido a que una clase en Java
 Solo puede tener 1 clase Padre '/
 @startuml Diagrama de Clases 
 Title Sistema de Estudiantes
@@ -13,7 +13,7 @@ class Persona{
   +mostrarInformacion(): void 
 }
 
-abstract class Curso{
+interface Curso{
   #nombreCurso: String
   #seccionCurso: char 
   #horarioCurso: String
