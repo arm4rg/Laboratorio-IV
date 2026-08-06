@@ -41,7 +41,13 @@ public class EstadisticasBasicas {
   }
 
   public static void Menor(){
-    
+    float menor=numeros[0];
+      for (float f : numeros) {
+        if (f<menor) {
+          menor = f;
+        }
+      }
+      System.out.println("El numero menor de los 5 numeros es: " +menor);
   }  
   public static void main(String[] args) {
     ingresarNumeros();
