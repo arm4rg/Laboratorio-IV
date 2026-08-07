@@ -1,0 +1,25 @@
+@startuml Diagrama de Secuencia
+title Consulta de información de un estudiante
+
+actor Usuario
+participant Sistema
+database "Base de Datos" as BD
+
+Usuario -> Sistema: Consultar estudiante(carnet)
+activate Sistema
+
+Sistema ->BD: Buscar estudiante(carnet)
+activate BD
+
+alt Estudiante Encontrado
+  BD --> Sistema: Datos del estudiante
+  Sistema --> Usuario: Mostrar Información
+else Estudiante No Encontrado
+  BD --> Sistema: No existe
+  Sistema --> Usuario: Mostrar mensaje "Estudiante no encontrado"
+end
+
+deactivate BD
+deactivate Sistema
+
+@enduml
