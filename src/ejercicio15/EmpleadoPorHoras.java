@@ -73,6 +73,5 @@ public class EmpleadoPorHoras extends Empleado{
   public void calculoDePago(){
     float pagoTotal = pagoPorHora * horasTrabajadas;
     System.out.println("El pago total del trabajador por horas es de Q." +pagoTotal);
-    scanner.close();
   }
 }
